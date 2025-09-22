@@ -749,7 +749,7 @@ export const DrawingPrototypeOnClickLeftHandler = async function (wrapped, ...ar
   return wrapped(...args);
 };
 
-export const TilePrototypeOnClickLeftHandler = async function (wrapped, ...args) {
+export const TilePrototypeOnClickLeftHandler = function (wrapped, ...args) {
   if (game.settings.get(CONSTANTS.MODULE_ID, "enableTilesIntegration")) {
     const [target] = args;
     const tile = this;
@@ -776,7 +776,7 @@ export const TilePrototypeOnClickLeftHandler = async function (wrapped, ...args)
       }
       return wrapped(...args);
     }
-    const isInReach = await TilesReach.globalInteractionDistance(tokenSelected, tile);
+    const isInReach = TilesReach.globalInteractionDistance(tokenSelected, tile);
     if (!doNotReselectIfGM) {
       reselectTokenAfterInteraction(tokenSelected);
     }
