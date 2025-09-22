@@ -1,5 +1,5 @@
-import CONSTANTS from "../constants.js";
-import Logger from "./Logger.js";
+import CONSTANTS from "../constants";
+import Logger from "./Logger";
 
 export class ArmsReachFormConfig {
     static configHandlers = {
