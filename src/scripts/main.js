@@ -366,7 +366,7 @@ export const TokenPrototypeOnClickLeft2Handler = async function (wrapped, ...arg
     const [target] = args;
     const token = this;
 
-    let range = foundry.utils.getProperty(token, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
+    let range = token.document.getFlag(CONSTANTS.MODULE_ID, CONSTANTS.FLAGS.RANGE) || 0;//foundry.utils.getProperty(token, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
 
     // const prefixToCheck = game.settings.get(CONSTANTS.MODULE_ID, "tokensIntegrationByPrefix");
     // const isTokenNameChecked = getCharacterName(token)?.startsWith(prefixToCheck);
