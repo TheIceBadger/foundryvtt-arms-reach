@@ -1,5 +1,5 @@
-import CONSTANTS from "../constants";
-import Logger from "./Logger";
+import CONSTANTS from "../constants.js";
+import Logger from "./Logger.js";
 
 export class ArmsReachFormConfig {
     static configHandlers = {
@@ -95,7 +95,8 @@ export class ArmsReachFormConfig {
         const tagDocument = object?.document ?? object;
 
         let range =
-            foundry.utils.getProperty(tagDocument, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
+            //foundry.utils.getProperty(tagDocument, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
+			tagDocument.getFlag(CONSTANTS.MODULE_ID, CONSTANTS.FLAGS.RANGE) || 0; //not strictly necessary here but for the sake uniformity
         // let isEnabled = foundry.utils.getProperty(tagDocument, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.ENABLED}`) || false;
 
         let fieldset = `

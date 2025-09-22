@@ -16,18 +16,18 @@ import {
   getMousePosition,
   getPlaceablesAt,
   reselectTokenAfterInteraction,
-} from "./ArmsReachHelper";
-import { ArmsReachVariables, DoorsReach } from "./DoorsReach";
-import { NotesReach } from "./NotesReach";
-import { TokensReach } from "./TokensReach";
-import { LightsReach } from "./LightsReach";
-import { DrawingsReach } from "./DrawingsReach";
-import { TilesReach } from "./TilesReach";
-import { SoundsReach } from "./SoundsReach";
-import { WallsReach } from "./WallsReach";
-import CONSTANTS from "./constants";
-import API from "./api";
-import { registerSocket } from "./socket";
+} from "./ArmsReachHelper.js";
+import { ArmsReachVariables, DoorsReach } from "./DoorsReach.js";
+import { NotesReach } from "./NotesReach.js";
+import { TokensReach } from "./TokensReach.js";
+import { LightsReach } from "./LightsReach.js";
+import { DrawingsReach } from "./DrawingsReach.js";
+import { TilesReach } from "./TilesReach.js";
+import { SoundsReach } from "./SoundsReach.js";
+import { WallsReach } from "./WallsReach.js";
+import CONSTANTS from "./constants.js";
+import API from "./api.js";
+import { registerSocket } from "./socket.js";
 import Logger from "./lib/Logger.js";
 
 let taggerModuleActive;
@@ -366,7 +366,7 @@ export const TokenPrototypeOnClickLeft2Handler = async function (wrapped, ...arg
     const [target] = args;
     const token = this;
 
-    let range = foundry.utils.getProperty(token, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
+    let range = token.document.getFlag(CONSTANTS.MODULE_ID, CONSTANTS.FLAGS.RANGE) || 0;//foundry.utils.getProperty(token, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0;
 
     // const prefixToCheck = game.settings.get(CONSTANTS.MODULE_ID, "tokensIntegrationByPrefix");
     // const isTokenNameChecked = getCharacterName(token)?.startsWith(prefixToCheck);

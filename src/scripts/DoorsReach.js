@@ -45,8 +45,9 @@ export const DoorsReach = {
                 ? maxDistance
                 : game.settings.get(CONSTANTS.MODULE_ID, "doorInteractionMeasurement");
         let range =
-            foundry.utils.getProperty(targetPlaceableObject, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) ||
-            0;
+            //foundry.utils.getProperty(targetPlaceableObject, `flags.${CONSTANTS.MODULE_ID}.${CONSTANTS.FLAGS.RANGE}`) || 0; 
+			targetPlaceableObject.wall?.document.getFlag(CONSTANTS.MODULE_ID, CONSTANTS.FLAGS.RANGE) || 0;
+			
         globalInteraction = range > 0 ? range : globalInteraction;
         // Sets the global maximum interaction distance
         // Global interaction distance control. Replaces prototype function of DoorControl. Danger...
