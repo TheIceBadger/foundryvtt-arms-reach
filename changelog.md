@@ -1,5 +1,13 @@
 # CHANGELOG
 
+### 13.0.2
+
+- https://github.com/p4535992/foundryvtt-arms-reach/issues/104 ty to @Saibot393
+- https://github.com/p4535992/foundryvtt-arms-reach/issues/102 ty to @Saibot393
+- https://github.com/p4535992/foundryvtt-arms-reach/issues/101 ty to @Saibot393
+- https://github.com/p4535992/foundryvtt-arms-reach/issues/94 ty to @Saibot393
+- https://github.com/p4535992/foundryvtt-arms-reach/issues/88 (maybe ?) ty to @Saibot393 
+
 ### 13.0.0-1 (BETA)
 
 - Update module.json, Ty to @oestred for found the time to make some compatibility test https://github.com/p4535992/foundryvtt-arms-reach/issues/103
