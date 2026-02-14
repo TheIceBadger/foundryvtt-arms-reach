@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 13.0.3
+
+- PR https://github.com/p4535992/foundryvtt-arms-reach/pull/108 for fix https://github.com/p4535992/foundryvtt-arms-reach/pull/108/changes/1753a3c87c04a5b46619b4e77596beb1f11a178a
+
 ### 13.0.2
 
 - https://github.com/p4535992/foundryvtt-arms-reach/issues/104 ty to @Saibot393
