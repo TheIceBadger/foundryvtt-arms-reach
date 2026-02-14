@@ -83,8 +83,8 @@ export class ArmsReachFormConfig {
             Logger.debug("Setting 'enableAdditionalReachSettingOnPlaceableConfigSheet' is disabled");
             return;
         }
-        const elem = html.find(`div[data-tab="label"]`);
-        this._applyHtml(app, elem, true);
+        const elem = html.find(`div[data-tab="main"]`).find(".form-group").last();
+        this._applyHtml(app, elem);
     }
 
     static _applyHtml(app, elem, insertBefore = false) {
